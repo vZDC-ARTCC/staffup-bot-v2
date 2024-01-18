@@ -1,0 +1,46 @@
+{
+  "name": "vzdc-bot",
+  "version": "1.0.0",
+  "description": "Discord Bot",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src --ext .js,.ts",
+    "dev": "tsc-watch --project . --outDir ./dist --onSuccess \"nodemon ./dist/index.js\"",
+    "build": "tsc -p .",
+    "prod": "bash config.json.sh && node dist/index.js"
+  },
+  "huskey": {
+    "pre-commit": "yarn lint"
+  },
+  "author": "Daniel A. Hawton <daniel@hawton.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "babel-preset-minify": "^0.5.1",
+    "discord.js": "^13.8.0",
+    "get-stream": "^6.0.1",
+    "mysql2": "^2.2.5",
+    "node-cron": "^3.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/google-spreadsheet": "^3.1.3",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1",
+    "ts-node": "^10.0.0",
+    "tsc-watch": "^4.4.0",
+    "typescript": "^4.7.4"
+  }
+}

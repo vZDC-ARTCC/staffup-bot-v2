@@ -1,0 +1,8 @@
+{
+  "discord": {
+    "token": "$DISCORD_TOKEN"
+  },
+  "github": {
+    "token": "$GITHUB_TOKEN"
+  }
+}
