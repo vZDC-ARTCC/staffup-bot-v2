@@ -119,7 +119,7 @@ client.on("ready", () => __awaiter(void 0, void 0, void 0, function* () {
 
                 // Filter to include only ZDC controllers and watched positions
                 onlineControllers = onlineControllers.filter(controller => watchedPositions.some(prefix => controller.callsign.startsWith(prefix)));
-
+    
                 categories.forEach(category => {
                     const filteredControllers = filterControllersByCategory(category, onlineControllers);
                     const previouslyFilteredControllers = filterControllersByCategory(category, previouslyOnlineZDCControllers);
@@ -147,12 +147,12 @@ client.on("ready", () => __awaiter(void 0, void 0, void 0, function* () {
 function filterControllersByCategory(category, controllers) {
     if (category === 'Washington Center') {
         return controllers.filter(controller => controller.callsign.endsWith('CTR'));
-    } else if (category === 'PCT Approch') {
+    } else if (category === 'PCT Approach') {
         return controllers.filter(controller =>
             ['PCT_', 'IAD_', 'DCA_', 'BWI_'].some(prefix => controller.callsign.startsWith(prefix))
             && (controller.callsign.endsWith('APP') || controller.callsign.endsWith('DEP'))
         );
-    } else if (category === 'Minor Approch') {
+    } else if (category === 'Minor Approach') {
         // Exclude PCT Approach controllers
         return controllers.filter(controller =>
             !['PCT_', 'IAD_', 'DCA_', 'BWI_'].some(prefix => controller.callsign.startsWith(prefix))

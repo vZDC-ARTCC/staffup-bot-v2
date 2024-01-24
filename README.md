@@ -1,10 +1,10 @@
-vZDC Staff Update Bot:
+# vZDC Staff Update Bot:
 
-Introduction:
+## Introduction:
 This Discord bot provides real-time updates on the status of controllers in the virtual Washington ARTCC (vZDC) on the VATSIM network. 
 The bot regularly fetches data from VATSIM, filters controllers based on specific categories, and updates Discord channels with the current controller status.
 
-Installation:
+## Installation:
 1. Clone the Repository:
     git clone https://github.com/vZDC-ARTCC/staffup-bot-v2.git
 2. Install Dependencies:
@@ -15,11 +15,11 @@ Installation:
 4. Update Channel Names:
     Open dist/index.js and update lines 79,102,108 and 203 with the names of the channels where announcements should be posted.
 
-Usage:-
+## Usage:-
     Start the bot with the following command:
         node dist/index.js
 
-CAUTION:- 
+## CAUTION:- 
     At the time of log in the bot will delet all previous messages from that particular channel !!
 
 Contributions are warmly welcome! 
